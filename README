@@ -1,0 +1,42 @@
+# WatermarkingAPI
+
+A .NET 8 Web API for applying watermarks to images.
+
+## Features
+
+- Apply watermarks to images via HTTP requests
+- Rate limiting enabled (default: 10 requests per minute per IP)
+- Swagger UI for API exploration (enabled in Development)
+
+## Getting Started
+
+1. Clone the repository.
+2. Build and run the project using Visual Studio 2022 or `dotnet run`.
+3. Access Swagger UI at `https://localhost:{port}/swagger` for interactive API documentation.
+
+## Sample Requests
+
+### Apply Watermark (POST)
+
+**Endpoint:**  
+`POST /api/watermark`
+
+**Request (multipart/form-data):**
+
+### Rate Limiting
+
+If you exceed 10 requests per minute, you will receive:
+
+## API Documentation
+
+Visit `/swagger` while running in Development mode for full API documentation and testing.
+
+## Configuration
+
+- Rate limiting can be configured in `appsettings.json`.
+- Logging is provided via Serilog.
+
+---
+
+**Note:** Replace `{port}` with your actual running port.
+
